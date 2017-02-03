@@ -5,7 +5,7 @@ public class Member {
 	private String _password;
 	private String _name;
 	private String _group;
-	private String _level;
+	private int _level;
 	
 	public String get_id() {
 		return _id;
@@ -31,10 +31,10 @@ public class Member {
 	public void set_group(String _group) {
 		this._group = _group;
 	}
-	public String get_level() {
+	public int get_level() {
 		return _level;
 	}
-	public void set_level(String _level) {
+	public void set_level(int _level) {
 		this._level = _level;
 	}
 	
