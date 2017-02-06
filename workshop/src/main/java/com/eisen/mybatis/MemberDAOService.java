@@ -1,4 +1,4 @@
-package com.eisen.Member;
+package com.eisen.mybatis;
 
 import java.util.ArrayList;
 

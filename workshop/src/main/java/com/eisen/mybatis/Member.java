@@ -1,4 +1,4 @@
-package com.eisen.Member;
+package com.eisen.mybatis;
 
 public class Member {
 	private String _id;
