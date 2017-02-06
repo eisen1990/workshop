@@ -19,4 +19,15 @@ public class MemberDAOService implements MemberDAO{
 		result = Mapper.getMembersSQL();
 		return result;
 	}
+	
+	public boolean login(Member member)
+	{
+		MemberMapper Mapper = sqlSession.getMapper(MemberMapper.class);
+		if(Mapper.loginSQL(member).isEmpty()) {
+			return false;
+		}
+		else {
+			return true;
+		}
+	}
 }
