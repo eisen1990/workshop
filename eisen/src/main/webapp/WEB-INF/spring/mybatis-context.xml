@@ -16,7 +16,7 @@
 	
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-        <property name="url" value="jdbc:mysql://203.255.92.139/dbspring?autoReconnect=true"/>
+        <property name="url" value="jdbc:mysql://203.255.92.139:8080/dbspring?autoReconnect=true"/>
         <property name="username" value="uspring"/>
         <property name="password" value="spring"/>
     </bean>
@@ -25,7 +25,7 @@
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 		<property name="typeAliasesPackage" value="com.company.eisen" />
-		<property name="mapperLocations" value="classpath:com/company/*/*.xml" />
+		<property name="mapperLocations" value="classpath:com/company/**/*.xml" />
 	</bean>
 
 	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
