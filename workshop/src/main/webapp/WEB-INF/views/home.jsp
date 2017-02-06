@@ -6,9 +6,12 @@
 </head>
 <body>
 <h1>
-	Hello world!  
+	Hello world!  test
 </h1>
 
-<P>  The time on the server is ${serverTime}. </P>
+<c:forEach var="result" items="${member}">
+	${result._id}
+	${result._name}
+</c:forEach> 
 </body>
 </html>
