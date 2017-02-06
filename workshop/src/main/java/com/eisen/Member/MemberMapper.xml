@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.eisen.workshop.MemberMapper">
+
+	<resultMap type="Member" id="MemberResultMap">
+		<result property="_id" column="id" />
+		<result property="_password" column="password" />
+		<result property="_name" column="name" />
+		<result property="_group" column="group" />
+		<result property="_level" column="level" />
+	</resultMap>
+
+	<select id="getMembersSQL" resultMap="MemberResultMap">
+		SELECT * FROM member
+	</select>
+
+</mapper>
