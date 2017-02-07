@@ -21,13 +21,11 @@
 		SELECT * FROM member WHERE id = #{_id} AND password = #{_password}
 	</select>
 		
-	
-	<!-- 
-	<insert id="insertMember" parameterType="com.test.mybatis.Member" >
-		INSERT INTO member values(#{_name},#{_email},#{_phone})
+	<insert id="insertMemberSQL" parameterType="com.eisen.mybatis.Member" >
+		INSERT INTO member values(#{_id},#{_password},#{_name},#{_group},#{_level})
 	</insert>
 	
-	
+	<!--
 	<update id=""></update>
 	
 	<delete id="deleteMember" parameterType="com.test.mybatis.Member">

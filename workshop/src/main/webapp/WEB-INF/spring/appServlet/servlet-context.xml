@@ -30,6 +30,7 @@
             <mvc:mapping path="/**" />
             <mvc:exclude-mapping path="/" />
             <mvc:exclude-mapping path="/login" />
+            <mvc:exclude-mapping path="/logout" />
             <beans:bean id="sessionInterceptor" class="com.eisen.workshop.SessionInterceptor"></beans:bean>
           </mvc:interceptor>
     </mvc:interceptors>

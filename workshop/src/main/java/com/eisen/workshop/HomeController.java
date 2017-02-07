@@ -26,7 +26,7 @@ public class HomeController {
 	@Autowired
 	private MemberDAOService memberDAOService;
 
-	@RequestMapping(value = "/", method = RequestMethod.GET)
+	@RequestMapping(value = "/")
 	public ModelAndView home(HttpServletRequest request, HttpServletResponse response) {
 		logger.info("Home Controller");
 		
@@ -43,7 +43,7 @@ public class HomeController {
 		return result;
 	}
 	
-	@RequestMapping(value = "/login", method = RequestMethod.POST)
+	@RequestMapping(value = "/login")
 	public ModelAndView login(HttpServletRequest request, HttpSession session)
 	{
 		ModelAndView result = new ModelAndView();
@@ -54,8 +54,10 @@ public class HomeController {
 		{
 			logger.info("login ok");
 			session.setAttribute("UserInfo", member);
+			result.setViewName("home");
 		}
-		result.setViewName("home");
+		else
+			result.setViewName("login");
 		return result;
 	}
 	

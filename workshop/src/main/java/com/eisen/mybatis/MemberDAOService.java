@@ -20,6 +20,12 @@ public class MemberDAOService implements MemberDAO{
 		return result;
 	}
 	
+	public void insertMember(Member member)
+	{
+		MemberMapper Mapper = sqlSession.getMapper(MemberMapper.class);
+		Mapper.insertMemberSQL(member);
+	}
+	
 	public boolean login(Member member)
 	{
 		MemberMapper Mapper = sqlSession.getMapper(MemberMapper.class);

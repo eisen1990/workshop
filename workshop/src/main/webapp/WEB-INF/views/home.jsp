@@ -11,13 +11,8 @@
 </head
 >
 <body>
-로그인 중인가? ${isLogin}
-<form method="post" action="/workshop/login">
-<input type="text" name="id"></input>
-<input type="text" name="password"></input>
-<input type="submit" value="제출"></input>
-</form>
 
 <a href="/workshop/logout"> 로그아웃 </a>
+<a href="/workshop/members"> 멤버 </a>
 </body>
 </html>

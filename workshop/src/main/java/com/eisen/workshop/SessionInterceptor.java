@@ -22,7 +22,7 @@ public class SessionInterceptor extends HandlerInterceptorAdapter {
 		
 		if(session == null)
 		{
-			response.sendRedirect(request.getContextPath()+"/");
+			response.sendRedirect(request.getContextPath()+"/login");
 			return false;
 		}
 		
@@ -30,8 +30,12 @@ public class SessionInterceptor extends HandlerInterceptorAdapter {
 		
 		if(member == null)
 		{
-			response.sendRedirect(request.getContextPath()+"/");
+			response.sendRedirect(request.getContextPath()+"/login");
 			return false;
+		}
+		else
+		{
+			
 		}
 	    
 	    return true;
@@ -41,9 +45,8 @@ public class SessionInterceptor extends HandlerInterceptorAdapter {
 	  @Override
 	  public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler,
 	      ModelAndView modelAndView) throws Exception {
-	 
-	    logger.info("===========================          END           ===========================");
-	   
+		  String uri = request.getRequestURI();
+		  logger.info(uri);
 	  }
 
 }
