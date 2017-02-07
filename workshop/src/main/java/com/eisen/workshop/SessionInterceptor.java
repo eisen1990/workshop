@@ -33,13 +33,8 @@ public class SessionInterceptor extends HandlerInterceptorAdapter {
 			response.sendRedirect(request.getContextPath()+"/login");
 			return false;
 		}
-		else
-		{
-			
-		}
 	    
 	    return true;
-	 
 	  }
 	 
 	  @Override

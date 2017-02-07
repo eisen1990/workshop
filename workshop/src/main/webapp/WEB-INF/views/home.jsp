@@ -12,7 +12,14 @@
 >
 <body>
 
-<a href="/workshop/logout"> ·Î±×¾Æ¿ô </a>
-<a href="/workshop/members"> ¸â¹ö </a>
+<p><a href="/workshop/logout"> ·Î±×¾Æ¿ô </a></p>
+<p><a href="/workshop/members"> ¸â¹ö </a></p>
+<p>
+<form action="/workshop/fileupload" method="POST" enctype="multipart/form-data">
+<input type="file" name="file">
+<input type="submit" value="ÆÄÀÏÀü¼Û">
+</form>
+</p>
+
 </body>
 </html>
